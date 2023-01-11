@@ -14,6 +14,5 @@ public class Processor {
     
     System.out.println(mapper.writeValueAsString(car));
     
-    
   }
 }
