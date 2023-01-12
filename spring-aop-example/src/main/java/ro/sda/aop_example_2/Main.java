@@ -1,16 +1,16 @@
-package ro.sda.aop_example;
+package ro.sda.aop_example_2;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import ro.sda.aop_example.config.ProjectConfig;
-import ro.sda.aop_example.services.MathService;
+
+import ro.sda.aop_example_2.config.ProjectConfig;
+import ro.sda.aop_example_2.service.AccountInfoService;
 
 public class Main {
 
   public static void main(String[] args) {
     try (var c = new AnnotationConfigApplicationContext(ProjectConfig.class)) {
-      MathService s = c.getBean(MathService.class);
-      int res = s.add(10, 5);
-      System.out.println(res);
+      AccountInfoService s = c.getBean(AccountInfoService.class);
+      s.getAccountInfo();
     }
   }
   

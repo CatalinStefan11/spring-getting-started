@@ -1,4 +1,4 @@
-package ro.sda.aop_example.aspects;
+package ro.sda.aop_example_1.aspects;
 
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
@@ -11,15 +11,18 @@ import org.aspectj.lang.annotation.Before;
  * A join-point is a candidate point in the Program Execution of the application where an aspect can be plugged in.
  * This point could be a method being called, an exception being thrown, or even a field being modified. 
  * These are the points where your aspect’s code can be inserted into the normal flow of your application to add new behavior.
+ * In Spring AOP a join point is always the execution of a method.
  *
- * Advice: This is an object which includes API invocations to the system-wide concerns representing the action to perform at a join-point specified by a point.
+ * Advice:  Advices are actions taken for a particular join point. 
+ * This is an object which includes API invocations to the system-wide concerns representing the action to perform at a join-point specified by a point.
+ * 
+ * Aspect: An aspect is a class that implements enterprise application concerns that cut across multiple classes, such as transaction management. 
  *
  * Pointcut: A pointcut defines at what join-points, the associated Advice should be applied. 
  * Advice can be applied at any join-point supported by the AOP framework. 
  * Of course, you don’t want to apply all of your aspects at all the possible join-points. 
  * Pointcuts allow you to specify where you want your advice to be applied.
- * 
- * 
+ *
  * Explanation using Restaurant Analogy: Source by https://coderanch.com/t/485525/frameworks/Difference-Joint-Point-Point-Cut
  *
  * When you go out to a restaurant, you look at a menu and see several options to choose from. You can order one or more of the items on the menu. 

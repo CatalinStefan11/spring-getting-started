@@ -1,4 +1,4 @@
-package ro.sda.aop_example.services;
+package ro.sda.aop_example_1.services;
 
 import org.springframework.stereotype.Service;
 
