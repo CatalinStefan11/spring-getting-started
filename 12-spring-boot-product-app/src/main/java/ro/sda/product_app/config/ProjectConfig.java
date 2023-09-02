@@ -27,6 +27,7 @@ public class ProjectConfig {
   
   @Bean
   public DataSource dataSource() {
+     
     log.info("Database driver {}", dbDriver);
     log.info("Database url {}", dataSourceUrl);
     log.info("Database user {}", dbUser);

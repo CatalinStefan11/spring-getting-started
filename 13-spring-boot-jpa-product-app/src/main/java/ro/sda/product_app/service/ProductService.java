@@ -35,8 +35,6 @@ public class ProductService {
   }
   
   public List<Product> findProductsWithPriceGreaterThen(int price){
-    
-    
     return productRepository.findProductsByPriceGreaterThan(price);
   }
   

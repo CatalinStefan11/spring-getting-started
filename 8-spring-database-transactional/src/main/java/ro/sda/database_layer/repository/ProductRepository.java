@@ -3,7 +3,6 @@ package ro.sda.database_layer.repository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import ro.sda.database_layer.mapper.ProductRowMapper;
 import ro.sda.database_layer.model.Product;
@@ -23,11 +22,13 @@ public class ProductRepository {
     void initDatabase(){
         String sql = "CREATE TABLE IF NOT EXISTS product(id bigint auto_increment, name varchar(255))";
         jdbcTemplate.update(sql);
+        
+        
     }
     
     @PreDestroy
     void dropDatabase(){
-        String sql = "DROP TABLE PRODUCT";
+        String sql = "DROP TABLE product";
         jdbcTemplate.update(sql);
     }
 

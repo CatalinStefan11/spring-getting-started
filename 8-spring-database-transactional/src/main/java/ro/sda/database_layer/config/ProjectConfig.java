@@ -1,6 +1,5 @@
 package ro.sda.database_layer.config;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -20,8 +19,7 @@ public class ProjectConfig {
   public DataSource dataSource() {
     var dataSource = new DriverManagerDataSource();
     dataSource.setDriverClassName("org.h2.Driver");
-    dataSource.setUrl("jdbc:h2:mem:db" +
-        "");
+    dataSource.setUrl("jdbc:h2:mem:db;DB_CLOSE_DELAY=-1");
     dataSource.setUsername("root");
     dataSource.setPassword("pass");
     return dataSource;

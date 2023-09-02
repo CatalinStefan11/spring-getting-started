@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import ro.sda.spring_di_1.beans.Cat;
 
 @Configuration
-@ComponentScan(basePackages = "ro.sda.spring_di.components")
+@ComponentScan(basePackages = "ro.sda.spring_di_1.components")
 public class ProjectConfig {
 
   @Bean

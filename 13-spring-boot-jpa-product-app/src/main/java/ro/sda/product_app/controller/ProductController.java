@@ -1,5 +1,6 @@
 package ro.sda.product_app.controller;
 
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -19,7 +20,7 @@ public class ProductController {
   private ProductService productService;
 
   @PostMapping("/product/add")
-  public void addProduct(@RequestBody Product p) {
+  public void addProduct(@Valid @RequestBody Product p) {
     productService.addProduct(p);
   }
 
